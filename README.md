@@ -52,3 +52,17 @@ O script irá guiá-lo interativamente:
 - Se o espaço for insuficiente, ele perguntará se você deseja especificar um novo caminho de destino para o arquivo `.mp4` final.  
 - A conversão será iniciada.  
   O vídeo final terá o nome da pasta selecionada (ex: `MeuPodcast_Ep1.mp4`).
+
+# 💻 Detalhes da Conversão (FFmpeg)
+
+O script utiliza uma configuração otimizada no FFmpeg para garantir velocidade, qualidade de áudio e tamanho leve do vídeo:
+
+Concatenação: Os arquivos MP3 são unidos usando o demuxer concat.
+
+Vídeo (Fundo): É gerada uma tela preta estática de 256x144 pixels a 1 quadro por segundo (color=black:s=256x144:r=1).
+
+Codec de Vídeo: libx264 com predefinição ultrafast e CRF 35 (alta compressão, vídeo leve).
+
+Codec de Áudio: aac com bitrate de 96k (qualidade padrão para áudio de vídeo).
+
+Parâmetro -shortest: Garante que a conversão termine assim que o áudio for concluído.
