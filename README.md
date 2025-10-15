@@ -57,12 +57,12 @@ O script irá guiá-lo interativamente:
 
 O script utiliza uma configuração otimizada no FFmpeg para garantir velocidade, qualidade de áudio e tamanho leve do vídeo:
 
-Concatenação: Os arquivos MP3 são unidos usando o demuxer concat.
+- **Concatenação**: Os arquivos MP3 são unidos usando o demuxer concat.
 
-Vídeo (Fundo): É gerada uma tela preta estática de 256x144 pixels a 1 quadro por segundo (color=black:s=256x144:r=1).
+- **Vídeo (Fundo)**: É gerada uma tela preta estática de 256x144 pixels a 1 quadro por segundo (color=black:s=256x144:r=1).
 
-Codec de Vídeo: libx264 com predefinição ultrafast e CRF 35 (alta compressão, vídeo leve).
+- **Codec de Vídeo**: libx264 com predefinição ultrafast e CRF 35 (alta compressão, vídeo leve).
 
-Codec de Áudio: aac com bitrate de 96k (qualidade padrão para áudio de vídeo).
+- **Codec de Áudio**: aac com bitrate de 96k (qualidade padrão para áudio de vídeo).
 
-Parâmetro -shortest: Garante que a conversão termine assim que o áudio for concluído.
+- **Parâmetro -shortest**: Garante que a conversão termine assim que o áudio for concluído.
